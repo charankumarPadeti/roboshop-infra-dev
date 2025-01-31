@@ -45,7 +45,7 @@ pipeline {
         }
         
     }
-    // Post build means build ipoena tharuwatha em cheyali ----------sirrrrkkkeldked
+    // Post build means build ipoena tharuwatha em cheyali --
     post { 
         always { 
             echo 'I will always say Hello again!'
