@@ -50,7 +50,7 @@ resource "null_resource" "mongodb" {
 
 module "redis" {
   source                 = "terraform-aws-modules/ec2-instance/aws"
-  ami = data.aws_ami.centos8.id
+  ami = data.aws_ami.RHEL-9.id
   name                   = "${local.ec2_name}-redis"
   instance_type          = "t2.micro"
   vpc_security_group_ids = [data.aws_ssm_parameter.redis_sg_id.value]
@@ -77,7 +77,7 @@ resource "null_resource" "redis" {
   connection {
     host = module.redis.private_ip
     type = "ssh"
-    user = "centos"
+    user = "ec2-user"
     password = "DevOps321"
   }
 
