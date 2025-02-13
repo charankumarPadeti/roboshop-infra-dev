@@ -23,6 +23,24 @@ resource "aws_ssm_parameter" "database_subnet_ids" {
   value = join(",", module.Roboshop.database_subnet_ids)
 }
 
+resource "aws_ssm_parameter" "rabbitmq_user" {
+  name  = "/${var.project_name}/${var.environment}/rabbitmq_user"
+  type  = "SecureString"
+  value = "roboshop"
+}
+
+resource "aws_ssm_parameter" "rabbitmq_password" {
+  name  = "/${var.project_name}/${var.environment}/rabbitmq_password"
+  type  = "SecureString"
+  value = "roboshop123"
+}
+
+resource "aws_ssm_parameter" "mysql" {
+  name  = "/${var.project_name}/${var.environment}/mysql"
+  type  = "SecureString"
+  value = "RoboShop@1"
+}
+
 # resource "aws_ssm_parameter" "database_subnet_ids" {
 #   name  = "/${var.project_name}/${var.environment}/database_subnet_ids"
 #   type  = "StringList"
