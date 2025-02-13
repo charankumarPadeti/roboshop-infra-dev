@@ -1,4 +1,6 @@
 #!/bin/bash
+
+dnf install ansible -y
 component=$1
 environment=$2  #dont use env here , because it is reserved in linux
 yum install python3.12-devel python3.12-pip -y

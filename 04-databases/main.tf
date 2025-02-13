@@ -91,6 +91,7 @@ resource "null_resource" "redis" {
     inline = [
       "chmod +x /tmp/bootstrap.sh",
       "sudo sh /tmp/bootstrap.sh redis dev"
+      
     ]
   }
 }
