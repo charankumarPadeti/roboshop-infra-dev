@@ -18,7 +18,7 @@ variable "common_tags" {
 }
 
 variable "zone_name" {
-  default = "charan.fun"
+  default = "devopspractice.fun"
 }
 
 variable "tags" {
