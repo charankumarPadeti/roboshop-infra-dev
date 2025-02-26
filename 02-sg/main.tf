@@ -1,5 +1,5 @@
 module "vpn" {
-  source = "../../terraform-aws-security-group" #google serach cheyy ....aws e
+  source = "git::https://github.com/charankumarPadeti/terraform-aws-security-group.git?ref=main" #google serach cheyy ....aws e
   project_name = var.project_name
   environment = var.environment
   sg_description = "SG for VPN"
@@ -10,7 +10,7 @@ module "vpn" {
 
 
 module "mongodb" {
-  source = "../../terraform-aws-security-group" #google serach cheyy ....aws e
+  source = "git::https://github.com/charankumarPadeti/terraform-aws-security-group.git?ref=main" #google serach cheyy ....aws e
   project_name = var.project_name
   environment = var.environment
   sg_description = "SG for mongodb"
@@ -20,7 +20,7 @@ module "mongodb" {
 }
 
 module "redis" {
-  source = "../../terraform-aws-security-group"
+  source = "git::https://github.com/charankumarPadeti/terraform-aws-security-group.git?ref=main"
   project_name = var.project_name
   environment = var.environment
   sg_description = "SG for redis"
@@ -30,7 +30,7 @@ module "redis" {
 }
 
 module "mysql" {
-  source = "../../terraform-aws-security-group"
+  source = "git::https://github.com/charankumarPadeti/terraform-aws-security-group.git?ref=main"
   project_name = var.project_name
   environment = var.environment
   sg_description = "SG for mysql"
@@ -39,7 +39,7 @@ module "mysql" {
 }
 
 module "rabbitmq" {
-  source = "../../terraform-aws-security-group"
+  source = "git::https://github.com/charankumarPadeti/terraform-aws-security-group.git?ref=main"
   project_name = var.project_name
   environment = var.environment
   sg_description = "SG for rabbitmq"
@@ -48,7 +48,7 @@ module "rabbitmq" {
 }
 
 module "user" {
-  source = "../../terraform-aws-security-group"
+  source = "git::https://github.com/charankumarPadeti/terraform-aws-security-group.git?ref=main"
   project_name = var.project_name
   environment = var.environment
   sg_description = "SG for user"
@@ -57,7 +57,7 @@ module "user" {
 }
 
 module "catalogue" {
-  source = "../../terraform-aws-security-group"
+  source = "git::https://github.com/charankumarPadeti/terraform-aws-security-group.git?ref=main"
   project_name = var.project_name
   environment = var.environment
   sg_description = "SG for catalogue"
@@ -66,7 +66,7 @@ module "catalogue" {
 }
 
 module "cart" {
-  source = "../../terraform-aws-security-group"
+  source = "git::https://github.com/charankumarPadeti/terraform-aws-security-group.git?ref=main"
   project_name = var.project_name
   environment = var.environment
   sg_description = "SG for cart"
@@ -75,7 +75,7 @@ module "cart" {
 }
 
 module "shipping" {
-  source = "../../terraform-aws-security-group"
+  source = "git::https://github.com/charankumarPadeti/terraform-aws-security-group.git?ref=main"
   project_name = var.project_name
   environment = var.environment
   sg_description = "SG for shipping"
@@ -85,7 +85,7 @@ module "shipping" {
 }
 
 module "payment" {
-  source = "../../terraform-aws-security-group"
+  source = "git::https://github.com/charankumarPadeti/terraform-aws-security-group.git?ref=main"
   project_name = var.project_name
   environment = var.environment
   sg_description = "SG for payment"
@@ -94,7 +94,7 @@ module "payment" {
 }
 
 module "web" {
-  source = "../../terraform-aws-security-group"
+  source = "git::https://github.com/charankumarPadeti/terraform-aws-security-group.git?ref=main"
   project_name = var.project_name
   environment = var.environment
   sg_description = "SG for web"
@@ -104,7 +104,7 @@ module "web" {
 
 #Application load-balacer security group
 module "app_alb" {
-  source = "../../terraform-aws-security-group"
+  source = "git::https://github.com/charankumarPadeti/terraform-aws-security-group.git?ref=main"
   project_name = var.project_name
   environment = var.environment
   sg_description = "SG for APP ALB"
@@ -113,7 +113,7 @@ module "app_alb" {
 }
 
 # module "database" {
-#   source = "../../terraform-aws-security-group"
+#   source = "git::https://github.com/charankumarPadeti/terraform-aws-security-group.git?ref=main"
 #   project_name = var.project_name
 #   environment = var.environment
 #   sg_description = "SG for database"
