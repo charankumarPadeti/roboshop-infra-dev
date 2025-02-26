@@ -36,7 +36,7 @@ resource "aws_ssm_parameter" "rabbitmq_password" {
 }
 
 resource "aws_ssm_parameter" "mysql" {
-  name  = "/${var.project_name}/${var.environment}/mysql"
+  name  = "/${var.project_name}/${var.environment}/mysql_root_pass"
   type  = "SecureString"
   value = "RoboShop@1"
 }
